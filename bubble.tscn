@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://cvjy8fdw4la5t"]
+[gd_scene load_steps=15 format=3 uid="uid://cvjy8fdw4la5t"]
 
+[ext_resource type="Script" uid="uid://bot66gnb3um8w" path="res://bubble.gd" id="1_4a276"]
 [ext_resource type="Texture2D" uid="uid://dpxyc5v2kqbww" path="res://soap-bubble-burst-effect-animated-sprite-explosion-vector-removebg-preview.png" id="1_n2mqj"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nxogm"]
@@ -71,21 +72,29 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fy5k1")
 }],
-"loop": true,
-"name": &"default",
+"loop": false,
+"name": &"pop",
 "speed": 8.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_n2mqj"]
-radius = 21.189621
+[sub_resource type="CircleShape2D" id="CircleShape2D_y2db8"]
+radius = 23.345236
 
-[node name="bubble" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="Node2D"]
+script = ExtResource("1_4a276")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-7, -44)
+position = Vector2(-10, -18)
 sprite_frames = SubResource("SpriteFrames_n2mqj")
-autoplay = "default"
+animation = &"pop"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -35)
-shape = SubResource("CircleShape2D_n2mqj")
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -0.9999962)
+scale = Vector2(1.4253441, 1.2616106)
+shape = SubResource("CircleShape2D_y2db8")
+
+[node name="ElementSprite" type="Sprite2D" parent="."]
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
