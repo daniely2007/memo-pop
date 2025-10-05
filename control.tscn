@@ -1,0 +1,147 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1dwuuqohrxkx"]
+
+[ext_resource type="Texture2D" uid="uid://dhkcsgxypdkrq" path="res://Elements/ChatGPT Image Oct 5, 2025, 11_32_48 AM.png" id="1_0fbet"]
+[ext_resource type="FontFile" uid="uid://cm7q72o8tew18" path="res://fonts/Lemon Days.ttf" id="1_62e2m"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20511743, 0.20511743, 0.20511743, 1)
+metadata/_edit_lock_ = true
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -359.0
+offset_top = -526.0
+offset_right = 360.0
+offset_bottom = -383.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_62e2m")
+theme_override_font_sizes/font_size = 36
+text = "score :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameName2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -359.0
+offset_top = -639.0
+offset_right = 360.0
+offset_bottom = -472.89502
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_62e2m")
+theme_override_font_sizes/font_size = 85
+text = "MemoPop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameName" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -359.0
+offset_top = -639.0
+offset_right = 360.0
+offset_bottom = -496.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.6368966, 0.8131437, 1)
+theme_override_fonts/font = ExtResource("1_62e2m")
+theme_override_font_sizes/font_size = 82
+text = "MemoPop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(650, 650)
+layout_mode = 0
+offset_left = 34.0
+offset_top = 222.0
+offset_right = 684.0
+offset_bottom = 908.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color(0.1148968, 0.11489681, 0.1148968, 1)
+
+[node name="ChatGptImageOct5,2025,113248Am" type="Sprite2D" parent="."]
+position = Vector2(359, 599.5)
+scale = Vector2(0.719, 0.60872394)
+texture = ExtResource("1_0fbet")
+
+[node name="Grid" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(650, 650)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.049000002
+anchor_top = 0.277
+anchor_right = 0.95300007
+anchor_bottom = 0.62100005
+offset_left = -0.2800026
+offset_top = -133.56
+offset_right = -1.1600342
+offset_bottom = 115.119934
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="TimeLeft" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 915.0
+offset_right = 712.0
+offset_bottom = 1012.0
+theme_override_fonts/font = ExtResource("1_62e2m")
+theme_override_font_sizes/font_size = 36
+text = "Ready to play?!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ToggleAudio" type="Button" parent="."]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 0
+offset_left = 164.0
+offset_top = 1128.0
+offset_right = 562.0
+offset_bottom = 1216.0
+theme_override_fonts/font = ExtResource("1_62e2m")
+theme_override_font_sizes/font_size = 41
+text = "audio on/off"
+
+[node name="ResetGame" type="Button" parent="."]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 1031.0
+offset_right = 564.0
+offset_bottom = 1119.0
+theme_override_fonts/font = ExtResource("1_62e2m")
+theme_override_font_sizes/font_size = 41
+text = "Reset game"
